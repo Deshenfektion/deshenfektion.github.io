@@ -265,7 +265,6 @@ body {
   background-color: rgb(255 255 255 / 0.5);
   height: 0.48rem;
   width: 0.18rem;
-  shrink: 0;
   border-radius: 1rem;
-  animation: blink 10s infinite;
+  animation: blink 4s infinite;
 }
