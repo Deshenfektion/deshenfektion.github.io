@@ -99,7 +99,7 @@ body {
   height: 72vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -140,13 +140,7 @@ body {
   outline-offset: 0.2rem;
   overflow: hidden;
   cursor: none;
-}
-
-@media (max-width: 1024px) {
-  .modal-action {
-    width: 100%;
-    max-width: 400px;
-  }
+  margin: 10px;
 }
 
 .modal-action:is(:hover, :focus-visible) {
