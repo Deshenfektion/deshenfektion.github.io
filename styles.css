@@ -1,13 +1,3 @@
-:root {
-  --glow-rgb: 245 245 245;
-
-  --light-gold-rgb: 249 181 51;
-  --dark-gold-rgb: 215 147 23;
-
-  --primary-stripe-rgb: 230 230 230;
-  --secondary-stripe-rgb: 240 240 240;
-}
-
 body {
   background-color: black;
   cursor: none;
@@ -36,17 +26,13 @@ body {
 }
 
 #star-container {
-  background: radial-gradient(
-    rgb(var(--light-gold-rgb)),
-    rgb(var(--dark-gold-rgb))
-  );
   height: 100%;
   overflow: hidden;
   position: relative;
 }
 
 #star-pattern {
-  background-image: url("https://assets.codepen.io/1468070/Star+Pattern+3.svg");
+  background-image: url("assets/Star+Pattern+3.svg");
   background-size: 10%;
   position: absolute;
   left: 50%;
