@@ -10,11 +10,11 @@ I’m a computer science student and curious developer interested in building cu
 
 ## 📂 Projects
 
-### 🔹 MarioTodo
+### [<img src="./assets/mariotodo-favicon.png" width="16" height="16">](https://link-to-live-app.com) [MarioTodo](https://link-to-live-app.com)
 
 [🔗 Live App](https://dein-vercel-link.vercel.app) | [💻 Source Code](https://github.com/dein-username/project-a)
 
-### 🔹 MyHeatmap – [GitHub Link](#)
+### [<img src="./assets/heatmap-favicon.png" width="16" height="16">](https://link-to-live-app.com) MyHeatmap
 
 [🔗 Live App](https://dein-vercel-link.vercel.app) | [💻 Source Code](https://github.com/dein-username/project-a)
 
