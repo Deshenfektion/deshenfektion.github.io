@@ -4,8 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deshen Rao Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <h1>Desh's Custom Apps</h1>
+    <div id="app">
+      <!-- Mario Star Background -->
+      <div id="star-container">
+        <div id="star-pattern"></div>
+        <div id="star-gradient-overlay"></div>
+      </div>
+      <!-- Section for projects -->
+      <div id="modal-wrapper">
+        <!-- Project 1 -->
+        <button type="button" class="modal-action">
+          <div class="modal-action-pattern"></div>
+          <div class="modal-action-fade"></div>
+          <span class="modal-action-text inter-font">MarioTodo</span>
+        </button>
+
+        <!-- Project 2 -->
+        <button type="button" class="modal-action">
+          <div class="modal-action-pattern"></div>
+          <div class="modal-action-fade"></div>
+          <span class="modal-action-text inter-font">MyHeatmap</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Magic Cursor -->
+    <div id="magic-mouse-container"></div>
+
+    <div id="cursor">
+      <img src="assets/Arrow+-+Cursor.webp" alt="Arrow Cursor" />
+      <div id="cursor-eyes">
+        <div class="cursor-eye"></div>
+        <div class="cursor-eye"></div>
+      </div>
+    </div>
   </body>
 </html>
