@@ -1,7 +1,7 @@
+/* --- General Styles & Resets --- */
 body {
   background-color: rgba(109, 179, 213, 0.904);
   cursor: none;
-  /* overflow: hidden;  Wird in @media angepasst für Scrollen */
 }
 
 * {
@@ -10,6 +10,7 @@ body {
   padding: 0;
 }
 
+/* --- Keyframe Animations --- */
 @keyframes pan {
   0% {
     background-position: 0% 0%;
@@ -19,22 +20,55 @@ body {
   }
 }
 
-#app {
-  min-height: 100vh; /* Geändert zu min-height für Flexibilität */
-  overflow: hidden; /* Wird in @media angepasst */
-  position: relative;
-  display: flex; /* Hilft bei der Footer-Positionierung, wenn Inhalt > 100vh */
-  flex-direction: column; /* Stellt sicher, dass Footer unten ist */
+@keyframes move-background {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -100% 0%;
+  }
 }
 
+@keyframes bounce {
+  0%,
+  20%,
+  100% {
+    translate: 0% 0%;
+  }
+  10% {
+    translate: 0% -12%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  3%,
+  100% {
+    scale: 1 1;
+  }
+  1.5% {
+    scale: 1 0;
+  }
+}
+
+/* --- App Container --- */
+#app {
+  min-height: 100vh;
+  overflow: hidden; /* Wird in @media angepasst */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Star Background --- */
 #star-container {
   height: 100%;
   overflow: hidden;
-  position: absolute; /* Absolut positioniert, damit es nicht scrollt */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: -1; /* Hinter den Inhalt legen */
+  z-index: -1;
 }
 
 #star-pattern {
@@ -57,9 +91,7 @@ body {
   background: radial-gradient(
     circle,
     transparent 75%,
-    rgb(var(--dark-gold-rgb))
-      /* Stelle sicher, dass --dark-gold-rgb definiert ist oder ersetze es */
-      /* Beispiel: rgb(25, 20, 5) */
+    rgba(18, 176, 255, 0.904)
   );
   position: absolute;
   left: 0px;
@@ -70,8 +102,7 @@ body {
   z-index: 2;
 }
 
-/* -- Modal -- */
-
+/* --- Fonts --- */
 .sixty-four-font {
   font-family: "Sixtyfour", sans-serif;
   font-optical-sizing: auto;
@@ -88,47 +119,45 @@ body {
   font-variation-settings: "slnt" 0;
 }
 
+/* --- Project Section (Modal Wrapper) --- */
 #modal-wrapper {
   width: 100%;
-  /* height: 72vh; Entfernt, Höhe wird durch Inhalt bestimmt */
-  min-height: 60vh; /* Mindesthöhe, um Platz zu gewährleisten */
+  min-height: 60vh;
   display: flex;
-  align-items: center; /* Zentriert die project-items vertikal */
-  justify-content: space-around; /* Verteilt die project-items horizontal */
-  flex-wrap: wrap; /* Erlaubt Umbruch bei vielen Projekten */
-  position: relative; /* Geändert von absolute, damit es im Fluss bleibt */
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
   z-index: 10;
-  padding: 15rem 2rem 4rem 2rem; /* Oben mehr Padding für Titel, unten für Footer */
-  margin-top: auto; /* Schiebt den Wrapper nach unten, wenn #app flex ist */
-  margin-bottom: auto; /* Zentriert vertikal, wenn Platz ist */
+  padding: 15rem 2rem 4rem 2rem;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-/* NEU: Container für Video und Button */
 .project-item {
   display: flex;
-  flex-direction: column; /* Video über Button */
-  align-items: center; /* Zentriert Video und Button horizontal */
-  margin: 1rem; /* Fügt etwas Abstand zwischen den Projekt-Items hinzu */
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
 }
 
-/* NEU: Styling für das Projekt-Video */
 .project-video {
-  width: 25rem; /* Gleiche Breite wie Button */
-  height: auto; /* Seitenverhältnis beibehalten */
+  width: 25rem;
+  height: auto;
   display: block;
-  margin-bottom: 1.5rem; /* Abstand zum Button */
-  border-radius: 0.75rem; /* Passend zum Button */
-  outline: 0.2rem solid white; /* Passend zum Button */
-  outline-offset: 0.2rem; /* Passend zum Button */
-  background-color: #1a1a1a; /* Dunkler Hintergrund während des Ladens */
-  object-fit: cover; /* Füllt den Container, schneidet ggf. ab */
+  margin-bottom: 1.5rem;
+  border-radius: 0.75rem;
+  outline: 0.2rem solid white;
+  outline-offset: 0.2rem;
+  background-color: #1a1a1a;
+  object-fit: cover;
 }
 
-a {
+/* Project Link/Button Styling */
+a.modal-action {
   width: 16rem;
 }
 
-/* Anpassung für den Button */
 .modal-action {
   width: 16rem;
   padding: 0.85rem;
@@ -140,11 +169,10 @@ a {
   outline-offset: 0.2rem;
   overflow: hidden;
   cursor: none;
-  /* margin: 10px; Entfernt, Abstand wird durch .project-item margin und #modal-wrapper justify gesteuert */
-  margin: 0; /* Sicherstellen, dass kein Standard-Margin stört */
-  display: inline-block; /* Stellt sicher, dass Breite/Höhe/Padding korrekt angewendet werden */
-  text-decoration: none; /* Entfernt den Link-Unterstrich */
-  text-align: center; /* Zentriert den Text innerhalb des Links */
+  margin: 0;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
   background-color: white;
 }
 
@@ -199,48 +227,13 @@ a {
   position: relative;
 }
 
-@keyframes move-background {
-  0% {
-    background-position: 0% 0%;
-  }
-
-  100% {
-    background-position: -100% 0%;
-  }
-}
-
-@keyframes bounce {
-  0%,
-  20%,
-  100% {
-    translate: 0% 0%;
-  }
-
-  10% {
-    translate: 0% -12%;
-  }
-}
-
-@keyframes blink {
-  0%,
-  3%,
-  100% {
-    scale: 1 1;
-  }
-
-  1.5% {
-    scale: 1 0;
-  }
-}
-
-/* -- Cursor -- */
-
+/* --- Custom Cursor --- */
 #cursor {
   height: 2rem;
-  position: fixed; /* Geändert zu fixed, damit es immer im Viewport bleibt */
-  z-index: 1000; /* Höherer z-index */
+  position: fixed;
+  z-index: 1000;
   pointer-events: none;
-  top: 0; /* Muss mit JS positioniert werden, aber Initialwerte sind gut */
+  top: 0;
   left: 0;
 }
 
@@ -270,131 +263,122 @@ a {
   animation: blink 4s infinite;
 }
 
-/* Title font */
+/* --- Title --- */
 #title-font {
-  width: clamp(300px, 80%, 800px); /* Responsive Breite */
+  width: clamp(300px, 80%, 800px);
   display: block;
-  position: absolute; /* Bleibt absolut zum #app Container */
+  position: absolute;
   top: 2rem;
   left: 50%;
-  transform: translateX(-50%); /* Zentrierung */
+  transform: translateX(-50%);
   height: auto;
-  z-index: 5; /* Unter dem Modal Wrapper aber über dem Hintergrund */
+  z-index: 5;
 }
 
-/* Footer */
-footer {
-  /* position: absolute; Entfernt */
-  /* bottom: 0; Entfernt */
-  width: 100%;
-  text-align: center;
-  color: white;
-  padding: 1rem; /* Etwas mehr Padding */
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: auto; /* Schiebt den Footer nach unten im Flex-Container #app */
-  z-index: 5; /* Über dem Hintergrund */
-  position: relative; /* Stellt sicher, dass es im normalen Fluss ist */
-}
-
-footer p {
-  font-size: xx-small;
-  /* Stroke for better readability */
-  text-shadow: -0.5px -0.5px black, 0.5px -0.5px black, -0.5px 0.5px black,
-    0.5px 0.5px black;
-}
-
-/* Responsive Anpassungen */
-@media (max-height: 800px) {
-  /* #modal-wrapper {
-    height: 100vh; Entfernt, da Höhe jetzt flexibel ist
-  } */
-}
-
-@media (max-width: 1024px) {
-  /* Keine spezifischen Änderungen hier notwendig, da flex-wrap bereits greift */
-}
-
-@media (max-width: 768px) {
-  body {
-    overflow-y: auto; /* Scrollen auf kleineren Screens erlauben */
-    cursor: default; /* Standard-Cursor auf Mobilgeräten anzeigen */
-  }
-  #app {
-    overflow: visible; /* Scrollen erlauben */
-    height: auto; /* Höhe an Inhalt anpassen */
-  }
-  #modal-wrapper {
-    flex-direction: column; /* Projekte untereinander stapeln */
-    align-items: center; /* Zentriert die gestapelten Items */
-    padding-top: 10rem; /* Mehr Platz oben für den Titel */
-    padding-bottom: 2rem;
-    min-height: auto; /* Keine feste Mindesthöhe mehr */
-  }
-  .project-item {
-    width: 90%; /* Nimmt fast die volle Breite ein */
-    max-width: 400px; /* Aber nicht zu breit werden */
-    margin-bottom: 3rem; /* Mehr Abstand zwischen gestapelten Projekten */
-  }
-
-  .project-video {
-    width: 100%; /* Video füllt die Breite des project-item */
-  }
-
-  .modal-action {
-    width: 100%; /* Button füllt die Breite des project-item */
-  }
-
-  #title-font {
-    top: 1.5rem; /* Titel etwas höher */
-    width: 90%; /* Titelbreite anpassen */
-  }
-
-  #cursor {
-    display: none; /* Cursor auf Touch-Geräten ausblenden */
-  }
-
-  footer {
-    position: relative; /* Sicherstellen, dass es am Ende des Inhalts bleibt */
-    margin-top: 2rem; /* Abstand zum letzten Element */
-  }
-}
-
-/* --- GitHub Portfolio Link (Angepasst für Positionierung im Fluss) --- */
+/* --- GitHub Portfolio Link --- */
 #github-portfolio-link {
-  /* Entfernt: position: absolute, top, right, z-index */
-  display: block; /* Macht den Link zu einem Block-Element */
-  width: fit-content; /* Breite an den Inhalt (Bild) anpassen */
-  margin-top: 0rem; /* Abstand zum modal-wrapper (anpassen nach Bedarf) */
-  margin-bottom: 2rem; /* Abstand zum footer (anpassen nach Bedarf) */
-  margin-left: auto; /* Zentriert horizontal */
-  margin-right: auto; /* Zentriert horizontal */
-  cursor: none; /* LÖST PROBLEM 1: Verwendet deinen Custom Cursor */
+  display: block;
+  width: fit-content;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: none;
 }
 
 #github-portfolio-link img {
-  height: 5rem; /* Höhe des Logos festlegen */
+  height: 5rem;
   width: auto;
-  display: block; /* Verhindert zusätzlichen Leerraum */
+  display: block;
   transition: opacity 0.2s ease-in-out;
-  /* filter: invert(1); */ /* Optional: Bei Bedarf einkommentieren */
 }
 
 #github-portfolio-link:hover img {
   opacity: 0.75;
 }
 
-/* --- Anpassungen für kleinere Bildschirme (innerhalb @media (max-width: 768px)) --- */
-@media (max-width: 768px) {
-  /* ... (andere 768px Regeln bleiben) ... */
+/* --- Footer --- */
+footer {
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: auto;
+  z-index: 5;
+  position: relative;
+}
 
-  /* Anpassung für GitHub Link auf Mobilgeräten */
+footer p {
+  font-size: xx-small;
+  text-shadow: -0.5px -0.5px black, 0.5px -0.5px black, -0.5px 0.5px black,
+    0.5px 0.5px black;
+}
+
+/* --- Responsive Styles --- */
+@media (max-height: 800px) {
+  /* Specific height adjustments if needed */
+}
+
+@media (max-width: 1024px) {
+  /* Tablet adjustments if needed */
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+    cursor: default;
+  }
+
+  #app {
+    overflow: visible;
+    height: auto;
+  }
+
+  #modal-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 2rem;
+    min-height: auto;
+  }
+
+  .project-item {
+    width: 90%;
+    max-width: 400px;
+    margin-bottom: 3rem;
+  }
+
+  .project-video {
+    width: 100%;
+  }
+
+  .modal-action,
+  a.modal-action {
+    /* Ensure width applies to link too */
+    width: 100%;
+  }
+
+  #title-font {
+    top: 1.5rem;
+    width: 90%;
+  }
+
+  #cursor {
+    display: none;
+  }
+
   #github-portfolio-link {
-    margin-top: 2rem; /* Ggf. Abstände anpassen */
+    margin-top: 2rem;
     margin-bottom: 2rem;
-    /* Cursor wird hier durch die body-Regel auf 'default' gesetzt, was ok ist */
   }
 
   #github-portfolio-link img {
-    height: 2rem; /* Logo etwas kleiner */
+    height: 2rem;
+  }
+
+  footer {
+    position: relative;
+    margin-top: 2rem;
   }
 }
