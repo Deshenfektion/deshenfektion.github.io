@@ -4,17 +4,30 @@ In this portfolio, I would like to showcase selected projects!
 
 ## 🧩 About Me
 
-My friends call me Desh and I'm interested in building custom applications because I am tired of spending countless hours trying to find the "perfect app", when I can just make them myself – all while making life just a little more exciting. 👾
+My friends call me Desh and I'm interested in building custom applications because I am tired of spending countless hours trying to find the "perfect app", when I can just make them myself – all while making life just a little more exciting! 👾
 
 ## 📂 Projects
 
 ### <img src="./assets/mariotodo-favicon.png" width="16" height="16"> MarioTodo
+A playful todo app styled like a Super Mario game. Combines a fun UI with a sense of progress and reward to boost motivation.
 
 [🔗 Live App](https://todo-list-six-puce.vercel.app/) | [💻 Source Code](https://github.com/Deshenfektion/todo-list)
 
 ### <img src="./assets/heatmap-favicon.png" width="16" height="16"> MyHeatmap
+A minimalist heatmap app inspired by GitHub's commit grid. Lets users define custom rows and track habits or routines through click-based activity squares.
 
 [🔗 Live App](https://heatmap-app-two.vercel.app/) | [💻 Source Code](https://github.com/Deshenfektion/heatmap-app)
+
+## 🔨 WIP
+
+- ⚗️📒 **Knowledge Vault**  
+  A minimalist personal blog app for journaling. Choose a template, upload an image, and start writing—no distractions, no complexity. Focused on self-expression with an aesthetic blog-style look.
+
+- 🌡️🌧️ **NowFeel**  
+  A sleek weather app that instantly shows how the temperature *feels*, not just what the numbers say. Simple, fast, and sensation-focused.
+
+- 🧹❤️😤 **Couple Chore Chaos**  
+  A fun and helpful chore-tracking app for couples. Keep the peace by fairly assigning tasks like cleaning or cooking—no more debates over who does what.
 
 ## 🚀 Goals
 
@@ -24,7 +37,7 @@ My friends call me Desh and I'm interested in building custom applications becau
 
 ## 📫 Contact
 
-Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/deshenrao/) or [Email](mailto:deshen.r1502@gmail.com)
+Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/deshenrao/) or [Email](mailto:deshen.r1502@gmail.com)!
 
 ## Credits
 
