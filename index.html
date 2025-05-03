@@ -16,22 +16,51 @@
       </div>
 
       <!-- Title -->
-      <img id="title-font" src="assets/title-font-my-projects.png" />
+      <img
+        id="title-font"
+        src="assets/title-font-my-projects.png"
+        alt="My Projects Title"
+      />
       <!-- Section for projects -->
       <div id="modal-wrapper">
         <!-- Project 1 -->
-        <button type="button" class="modal-action">
-          <div class="modal-action-pattern"></div>
-          <div class="modal-action-fade"></div>
-          <span class="modal-action-text inter-font">MarioTodo</span>
-        </button>
+        <div class="project-item">
+          <!-- NEU: Container für Video + Button -->
+          <video
+            autoplay
+            class="project-video"
+            src="assets/mariotodo-demo.mov"
+            muted
+            loop
+            playsinline
+          >
+            <!-- NEU: Video-Element (Pfad anpassen!) -->
+            Dein Browser unterstützt das Video-Tag nicht.
+            <!-- Fallback-Text -->
+          </video>
+          <button type="button" class="modal-action">
+            <div class="modal-action-pattern"></div>
+            <div class="modal-action-fade"></div>
+            <span class="modal-action-text inter-font">MarioTodo</span>
+          </button>
+        </div>
 
         <!-- Project 2 -->
-        <button type="button" class="modal-action">
-          <div class="modal-action-pattern"></div>
-          <div class="modal-action-fade"></div>
-          <span class="modal-action-text inter-font">MyHeatmap</span>
-        </button>
+        <div class="project-item">
+          <!-- NEU: Container für Video + Button -->
+          <video autoplay class="project-video" src="" muted loop playsinline>
+            <!-- NEU: Video-Element (Pfad anpassen!) -->
+            Dein Browser unterstützt das Video-Tag nicht.
+            <!-- Fallback-Text -->
+          </video>
+          <button type="button" class="modal-action">
+            <div class="modal-action-pattern"></div>
+            <div class="modal-action-fade"></div>
+            <span class="modal-action-text inter-font">MyHeatmap</span>
+          </button>
+        </div>
+
+        <!-- Füge hier bei Bedarf weitere .project-item Divs hinzu -->
       </div>
       <!-- Footer for Copyright purposes -->
       <footer>

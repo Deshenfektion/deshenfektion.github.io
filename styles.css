@@ -1,7 +1,8 @@
+/* Bestehende Styles bleiben erhalten */
 body {
   background-color: black;
   cursor: none;
-  overflow: hidden;
+  /* overflow: hidden;  Wird in @media angepasst für Scrollen */
 }
 
 * {
@@ -20,15 +21,21 @@ body {
 }
 
 #app {
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh; /* Geändert zu min-height für Flexibilität */
+  overflow: hidden; /* Wird in @media angepasst */
   position: relative;
+  display: flex; /* Hilft bei der Footer-Positionierung, wenn Inhalt > 100vh */
+  flex-direction: column; /* Stellt sicher, dass Footer unten ist */
 }
 
 #star-container {
   height: 100%;
   overflow: hidden;
-  position: relative;
+  position: absolute; /* Absolut positioniert, damit es nicht scrollt */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1; /* Hinter den Inhalt legen */
 }
 
 #star-pattern {
@@ -52,6 +59,8 @@ body {
     circle,
     transparent 75%,
     rgb(var(--dark-gold-rgb))
+      /* Stelle sicher, dass --dark-gold-rgb definiert ist oder ersetze es */
+      /* Beispiel: rgb(25, 20, 5) */
   );
   position: absolute;
   left: 0px;
@@ -82,39 +91,41 @@ body {
 
 #modal-wrapper {
   width: 100%;
-  height: 72vh;
+  /* height: 72vh; Entfernt, Höhe wird durch Inhalt bestimmt */
+  min-height: 60vh; /* Mindesthöhe, um Platz zu gewährleisten */
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  position: absolute;
-  left: 0px;
-  top: 0px;
+  align-items: center; /* Zentriert die project-items vertikal */
+  justify-content: space-around; /* Verteilt die project-items horizontal */
+  flex-wrap: wrap; /* Erlaubt Umbruch bei vielen Projekten */
+  position: relative; /* Geändert von absolute, damit es im Fluss bleibt */
   z-index: 10;
-  padding: 2rem;
+  padding: 8rem 2rem 4rem 2rem; /* Oben mehr Padding für Titel, unten für Footer */
+  margin-top: auto; /* Schiebt den Wrapper nach unten, wenn #app flex ist */
+  margin-bottom: auto; /* Zentriert vertikal, wenn Platz ist */
 }
 
-@media (max-height: 800px) {
-  #modal-wrapper {
-    height: 100vh;
-  }
+/* NEU: Container für Video und Button */
+.project-item {
+  display: flex;
+  flex-direction: column; /* Video über Button */
+  align-items: center; /* Zentriert Video und Button horizontal */
+  margin: 1rem; /* Fügt etwas Abstand zwischen den Projekt-Items hinzu */
 }
 
-@media (max-width: 1024px) {
-  #modal {
-    aspect-ratio: auto;
-    min-height: 500px;
-    width: 100%;
-    border-top-right-radius: 3rem;
-    border-bottom-left-radius: 3rem;
-  }
+/* NEU: Styling für das Projekt-Video */
+.project-video {
+  width: 25rem; /* Gleiche Breite wie Button */
+  height: auto; /* Seitenverhältnis beibehalten */
+  display: block;
+  margin-bottom: 1.5rem; /* Abstand zum Button */
+  border-radius: 0.75rem; /* Passend zum Button */
+  outline: 0.2rem solid white; /* Passend zum Button */
+  outline-offset: 0.2rem; /* Passend zum Button */
+  background-color: #1a1a1a; /* Dunkler Hintergrund während des Ladens */
+  object-fit: cover; /* Füllt den Container, schneidet ggf. ab */
 }
 
-@media (max-width: 728px) {
-  #modal {
-    min-height: 400px;
-  }
-}
-
+/* Anpassung für den Button */
 .modal-action {
   width: 16rem;
   padding: 0.85rem;
@@ -126,7 +137,8 @@ body {
   outline-offset: 0.2rem;
   overflow: hidden;
   cursor: none;
-  margin: 10px;
+  /* margin: 10px; Entfernt, Abstand wird durch .project-item margin und #modal-wrapper justify gesteuert */
+  margin: 0; /* Sicherstellen, dass kein Standard-Margin stört */
 }
 
 .modal-action:is(:hover, :focus-visible) {
@@ -218,9 +230,11 @@ body {
 
 #cursor {
   height: 2rem;
-  position: absolute;
-  z-index: 100;
+  position: fixed; /* Geändert zu fixed, damit es immer im Viewport bleibt */
+  z-index: 1000; /* Höherer z-index */
   pointer-events: none;
+  top: 0; /* Muss mit JS positioniert werden, aber Initialwerte sind gut */
+  left: 0;
 }
 
 #cursor > img {
@@ -251,27 +265,28 @@ body {
 
 /* Title font */
 #title-font {
-  width: 100%;
+  width: clamp(300px, 80%, 800px); /* Responsive Breite */
   display: block;
-  position: absolute;
+  position: absolute; /* Bleibt absolut zum #app Container */
   top: 2rem;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 800px;
+  left: 50%;
+  transform: translateX(-50%); /* Zentrierung */
   height: auto;
+  z-index: 5; /* Unter dem Modal Wrapper aber über dem Hintergrund */
 }
 
 /* Footer */
 footer {
-  position: absolute;
-  bottom: 0;
+  /* position: absolute; Entfernt */
+  /* bottom: 0; Entfernt */
   width: 100%;
   text-align: center;
   color: white;
-  padding: 0.5rem;
+  padding: 1rem; /* Etwas mehr Padding */
   font-family: Arial, Helvetica, sans-serif;
+  margin-top: auto; /* Schiebt den Footer nach unten im Flex-Container #app */
+  z-index: 5; /* Über dem Hintergrund */
+  position: relative; /* Stellt sicher, dass es im normalen Fluss ist */
 }
 
 footer p {
@@ -279,4 +294,60 @@ footer p {
   /* Stroke for better readability */
   text-shadow: -0.5px -0.5px black, 0.5px -0.5px black, -0.5px 0.5px black,
     0.5px 0.5px black;
+}
+
+/* Responsive Anpassungen */
+@media (max-height: 800px) {
+  /* #modal-wrapper {
+    height: 100vh; Entfernt, da Höhe jetzt flexibel ist
+  } */
+}
+
+@media (max-width: 1024px) {
+  /* Keine spezifischen Änderungen hier notwendig, da flex-wrap bereits greift */
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto; /* Scrollen auf kleineren Screens erlauben */
+    cursor: default; /* Standard-Cursor auf Mobilgeräten anzeigen */
+  }
+  #app {
+    overflow: visible; /* Scrollen erlauben */
+    height: auto; /* Höhe an Inhalt anpassen */
+  }
+  #modal-wrapper {
+    flex-direction: column; /* Projekte untereinander stapeln */
+    align-items: center; /* Zentriert die gestapelten Items */
+    padding-top: 10rem; /* Mehr Platz oben für den Titel */
+    padding-bottom: 2rem;
+    min-height: auto; /* Keine feste Mindesthöhe mehr */
+  }
+  .project-item {
+    width: 90%; /* Nimmt fast die volle Breite ein */
+    max-width: 400px; /* Aber nicht zu breit werden */
+    margin-bottom: 3rem; /* Mehr Abstand zwischen gestapelten Projekten */
+  }
+
+  .project-video {
+    width: 100%; /* Video füllt die Breite des project-item */
+  }
+
+  .modal-action {
+    width: 100%; /* Button füllt die Breite des project-item */
+  }
+
+  #title-font {
+    top: 1.5rem; /* Titel etwas höher */
+    width: 90%; /* Titelbreite anpassen */
+  }
+
+  #cursor {
+    display: none; /* Cursor auf Touch-Geräten ausblenden */
+  }
+
+  footer {
+    position: relative; /* Sicherstellen, dass es am Ende des Inhalts bleibt */
+    margin-top: 2rem; /* Abstand zum letzten Element */
+  }
 }
