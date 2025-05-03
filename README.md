@@ -4,7 +4,7 @@ In this portfolio, I would like to showcase selected projects!
 
 ## 🧩 About Me
 
-My friends call me Desh and I'm interested in building custom applications because I am tired of spending countless hours trying to find the "perfect app", when I can just make them myself – all while making life just a little more exciting. 👾
+My friends call me Desh and I'm interested in building custom applications because I am tired of spending countless hours trying to find the "perfect app", when I can just make them myself – all while making life just a little more exciting! 👾
 
 ## 📂 Projects
 
@@ -24,7 +24,7 @@ My friends call me Desh and I'm interested in building custom applications becau
 
 ## 📫 Contact
 
-Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/deshenrao/) or [Email](mailto:deshen.r1502@gmail.com)
+Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/deshenrao/) or [Email](mailto:deshen.r1502@gmail.com)!
 
 ## Credits
 
