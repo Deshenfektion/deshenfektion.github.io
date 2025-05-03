@@ -1,4 +1,3 @@
-/* Bestehende Styles bleiben erhalten */
 body {
   background-color: rgba(109, 179, 213, 0.904);
   cursor: none;
@@ -99,7 +98,7 @@ body {
   flex-wrap: wrap; /* Erlaubt Umbruch bei vielen Projekten */
   position: relative; /* Geändert von absolute, damit es im Fluss bleibt */
   z-index: 10;
-  padding: 12rem 2rem 4rem 2rem; /* Oben mehr Padding für Titel, unten für Footer */
+  padding: 15rem 2rem 4rem 2rem; /* Oben mehr Padding für Titel, unten für Footer */
   margin-top: auto; /* Schiebt den Wrapper nach unten, wenn #app flex ist */
   margin-bottom: auto; /* Zentriert vertikal, wenn Platz ist */
 }
@@ -357,5 +356,45 @@ footer p {
   footer {
     position: relative; /* Sicherstellen, dass es am Ende des Inhalts bleibt */
     margin-top: 2rem; /* Abstand zum letzten Element */
+  }
+}
+
+/* --- GitHub Portfolio Link (Angepasst für Positionierung im Fluss) --- */
+#github-portfolio-link {
+  /* Entfernt: position: absolute, top, right, z-index */
+  display: block; /* Macht den Link zu einem Block-Element */
+  width: fit-content; /* Breite an den Inhalt (Bild) anpassen */
+  margin-top: 0rem; /* Abstand zum modal-wrapper (anpassen nach Bedarf) */
+  margin-bottom: 2rem; /* Abstand zum footer (anpassen nach Bedarf) */
+  margin-left: auto; /* Zentriert horizontal */
+  margin-right: auto; /* Zentriert horizontal */
+  cursor: none; /* LÖST PROBLEM 1: Verwendet deinen Custom Cursor */
+}
+
+#github-portfolio-link img {
+  height: 5rem; /* Höhe des Logos festlegen */
+  width: auto;
+  display: block; /* Verhindert zusätzlichen Leerraum */
+  transition: opacity 0.2s ease-in-out;
+  /* filter: invert(1); */ /* Optional: Bei Bedarf einkommentieren */
+}
+
+#github-portfolio-link:hover img {
+  opacity: 0.75;
+}
+
+/* --- Anpassungen für kleinere Bildschirme (innerhalb @media (max-width: 768px)) --- */
+@media (max-width: 768px) {
+  /* ... (andere 768px Regeln bleiben) ... */
+
+  /* Anpassung für GitHub Link auf Mobilgeräten */
+  #github-portfolio-link {
+    margin-top: 2rem; /* Ggf. Abstände anpassen */
+    margin-bottom: 2rem;
+    /* Cursor wird hier durch die body-Regel auf 'default' gesetzt, was ok ist */
+  }
+
+  #github-portfolio-link img {
+    height: 2rem; /* Logo etwas kleiner */
   }
 }
