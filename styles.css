@@ -1,6 +1,6 @@
 /* Bestehende Styles bleiben erhalten */
 body {
-  background-color: black;
+  background-color: rgba(109, 179, 213, 0.904);
   cursor: none;
   /* overflow: hidden;  Wird in @media angepasst für Scrollen */
 }
@@ -99,7 +99,7 @@ body {
   flex-wrap: wrap; /* Erlaubt Umbruch bei vielen Projekten */
   position: relative; /* Geändert von absolute, damit es im Fluss bleibt */
   z-index: 10;
-  padding: 8rem 2rem 4rem 2rem; /* Oben mehr Padding für Titel, unten für Footer */
+  padding: 12rem 2rem 4rem 2rem; /* Oben mehr Padding für Titel, unten für Footer */
   margin-top: auto; /* Schiebt den Wrapper nach unten, wenn #app flex ist */
   margin-bottom: auto; /* Zentriert vertikal, wenn Platz ist */
 }
