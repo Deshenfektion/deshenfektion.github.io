@@ -125,6 +125,10 @@ body {
   object-fit: cover; /* Füllt den Container, schneidet ggf. ab */
 }
 
+a {
+  width: 16rem;
+}
+
 /* Anpassung für den Button */
 .modal-action {
   width: 16rem;
@@ -139,6 +143,10 @@ body {
   cursor: none;
   /* margin: 10px; Entfernt, Abstand wird durch .project-item margin und #modal-wrapper justify gesteuert */
   margin: 0; /* Sicherstellen, dass kein Standard-Margin stört */
+  display: inline-block; /* Stellt sicher, dass Breite/Höhe/Padding korrekt angewendet werden */
+  text-decoration: none; /* Entfernt den Link-Unterstrich */
+  text-align: center; /* Zentriert den Text innerhalb des Links */
+  background-color: white;
 }
 
 .modal-action:is(:hover, :focus-visible) {
