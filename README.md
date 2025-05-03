@@ -9,10 +9,12 @@ My friends call me Desh and I'm interested in building custom applications becau
 ## 📂 Projects
 
 ### <img src="./assets/mariotodo-favicon.png" width="16" height="16"> MarioTodo
+A playful todo app styled like a Super Mario game. Combines a fun UI with a sense of progress and reward to boost motivation.
 
 [🔗 Live App](https://todo-list-six-puce.vercel.app/) | [💻 Source Code](https://github.com/Deshenfektion/todo-list)
 
 ### <img src="./assets/heatmap-favicon.png" width="16" height="16"> MyHeatmap
+A minimalist heatmap app inspired by GitHub's commit grid. Lets users define custom rows and track habits or routines through click-based activity squares.
 
 [🔗 Live App](https://heatmap-app-two.vercel.app/) | [💻 Source Code](https://github.com/Deshenfektion/heatmap-app)
 
