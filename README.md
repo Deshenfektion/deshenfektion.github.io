@@ -16,6 +16,17 @@ My friends call me Desh and I'm interested in building custom applications becau
 
 [🔗 Live App](https://heatmap-app-two.vercel.app/) | [💻 Source Code](https://github.com/Deshenfektion/heatmap-app)
 
+## 🔨 WIP
+
+- ⚗️📒 **Knowledge Vault**  
+  A minimalist personal blog app for journaling. Choose a template, upload an image, and start writing—no distractions, no complexity. Focused on self-expression with an aesthetic blog-style look.
+
+- 🌡️🌧️ **NowFeel**  
+  A sleek weather app that instantly shows how the temperature *feels*, not just what the numbers say. Simple, fast, and sensation-focused.
+
+- 🧹❤️😤 **Couple Chore Chaos**  
+  A fun and helpful chore-tracking app for couples. Keep the peace by fairly assigning tasks like cleaning or cooking—no more debates over who does what.
+
 ## 🚀 Goals
 
 - Building useful software while being creative
