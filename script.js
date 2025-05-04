@@ -164,3 +164,10 @@ window.onmousemove = (e) => handleOnMove(e);
 window.ontouchmove = (e) => handleOnMove(e.touches[0]);
 
 document.body.onmouseleave = () => updateLastMousePosition(originPosition);
+
+/* --- Show introduction on button click --- */
+document.getElementById("show-intro-button").addEventListener("click", () => {
+  const intro = document.getElementById("introduction");
+  intro.classList.remove("hidden");
+  intro.classList.add("visible");
+});

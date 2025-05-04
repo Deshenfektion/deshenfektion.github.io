@@ -81,6 +81,10 @@ body {
 }
 
 /* -- Introduction -- */
+#show-intro-button {
+  margin-top: 2rem;
+}
+
 #introduction {
   text-align: center;
   display: flex;
@@ -90,8 +94,9 @@ body {
   color: rgb(255, 255, 255);
   font-size: 2rem;
   font-weight: 600;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 1.5px 1.5px 4px rgba(0, 0, 0, 0.5);
   max-width: 700px;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 #introduction p {
@@ -170,19 +175,22 @@ body {
   }
 }
 
-a.modal-action {
+a.modal-action,
+#show-intro-button {
   width: 12rem;
 }
 
 @media (max-width: 768px) {
-  a.modal-action {
+  a.modal-action,
+  #show-intro-button {
     width: 12rem; /* kleinere Breite */
   }
 }
 
 /* Für sehr kleine Bildschirme */
 @media (max-width: 480px) {
-  a.modal-action {
+  a.modal-action,
+  #show-intro-button {
     width: 8rem; /* noch kleinere Breite */
   }
 }
@@ -368,6 +376,20 @@ footer {
     position: relative;
     margin-top: 2rem;
   }
+}
+
+/* -- Hidden and Visible -- */
+.hidden {
+  opacity: 0;
+  transform: translateY(-30px);
+  pointer-events: none;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 /* --- Keyframe Animations --- */
