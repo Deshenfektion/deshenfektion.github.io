@@ -112,12 +112,12 @@ body {
 }
 
 .project-title-font-1 {
-  width: clamp(270px, 80%, 270px);
+  width: clamp(200px, 80%, 270px);
   margin-bottom: 1.5rem;
 }
 
 .project-title-font-2 {
-  width: clamp(300px, 80%, 300px);
+  width: clamp(250px, 80%, 300px);
   margin-bottom: 1rem;
 }
 
@@ -215,42 +215,41 @@ a.modal-action {
   position: relative;
 }
 
-/* --- GitHub Portfolio Link --- */
-#github-portfolio-link {
-  display: block;
-  width: fit-content;
-  margin-top: 0rem;
-  margin-bottom: 2rem;
-  cursor: none;
-  margin-top: 2rem;
-  margin-bottom: 5rem;
-}
-
-#github-portfolio-link img {
-  height: 10rem;
-  width: auto;
-  display: block;
-  transition: opacity 0.2s ease-in-out;
-}
-
-#github-portfolio-link:hover img {
-  opacity: 0.75;
-}
-
 /* --- Footer --- */
 footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   text-align: center;
   color: white;
   padding: 1rem;
+  gap: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: auto;
   z-index: 5;
   position: relative;
 }
 
-footer p {
-  font-size: xx-small;
+/* -- Social links -- */
+#social-links {
+  margin-top: auto;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  width: 3rem;
+}
+
+.social-icon:hover {
+  opacity: 0.5;
+  cursor: none;
+}
+
+/* Copyright and credits*/
+#copyright-and-credits p {
+  font-size: small;
   text-shadow: -0.5px -0.5px black, 0.5px -0.5px black, -0.5px 0.5px black,
     0.5px 0.5px black;
 }
