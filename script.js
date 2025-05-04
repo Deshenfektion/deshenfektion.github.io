@@ -171,3 +171,12 @@ document.getElementById("show-intro-button").addEventListener("click", () => {
   intro.classList.remove("hidden");
   intro.classList.add("visible");
 });
+
+/* --- Show projects on button click --- */
+document
+  .getElementById("show-projects-button")
+  .addEventListener("click", () => {
+    const projects = document.getElementById("modal-wrapper");
+    projects.classList.remove("hidden");
+    projects.classList.add("visible");
+  });

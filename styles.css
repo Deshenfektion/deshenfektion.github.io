@@ -82,7 +82,12 @@ body {
 /* -- Introduction -- */
 #show-intro-button {
   margin-top: 4.3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+#show-projects-button {
+  margin-bottom: 3.5rem;
+  margin-top: 1rem;
 }
 
 #introduction {
@@ -90,7 +95,7 @@ body {
   display: flex;
   font-family: "Play", sans-serif;
   flex-direction: column;
-  margin: 3rem 2rem 0rem 2rem;
+  margin: 3rem 2rem 4rem 2rem;
   color: rgb(255, 255, 255);
   font-size: 2rem;
   font-weight: 600;
@@ -100,18 +105,20 @@ body {
   transition: max-height 1s ease, opacity 0.6s ease, transform 0.6s ease;
 }
 
-#introduction.hidden {
+#introduction.hidden,
+#modal-wrapper.hidden {
   max-height: 0;
   opacity: 0;
   transform: translateY(-30px);
   margin: 0;
+  padding: 0;
 }
 
-#introduction.visible {
-  max-height: 600px;
+#introduction.visible,
+#modal-wrapper.visible {
+  max-height: 2000px;
   opacity: 1;
   transform: translateY(0);
-  margin: 3rem 2rem 5rem 2rem;
 }
 
 #introduction p {
@@ -140,8 +147,10 @@ body {
   gap: 5rem;
   position: relative;
   z-index: 10;
-  padding: 1rem 2rem 0rem 2rem;
+  padding: 0rem 2rem 0rem 2rem;
   margin-bottom: 5rem;
+  overflow: hidden;
+  transition: max-height 1s ease, opacity 0.6s ease, transform 0.6s ease;
 }
 
 .project-title-font-1 {
@@ -191,22 +200,24 @@ body {
 }
 
 a.modal-action,
-#show-intro-button {
+#show-intro-button,
+#show-projects-button {
   width: 12rem;
 }
 
 @media (max-width: 768px) {
   a.modal-action,
-  #show-intro-button {
-    width: 12rem; /* kleinere Breite */
+  #show-intro-button,
+  #show-projects-button {
+    width: 15rem;
   }
 }
 
-/* Für sehr kleine Bildschirme */
 @media (max-width: 480px) {
   a.modal-action,
-  #show-intro-button {
-    width: 8rem; /* noch kleinere Breite */
+  #show-intro-button,
+  #show-projects-button {
+    width: 8rem;
   }
 }
 
