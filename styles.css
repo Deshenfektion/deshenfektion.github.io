@@ -144,11 +144,10 @@ body {
 }
 
 a.modal-action {
-  width: 16rem;
+  width: 12rem;
 }
 
 .modal-action {
-  width: 16rem;
   padding: 0.85rem;
   position: relative;
   font-size: 1.25rem;
