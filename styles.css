@@ -206,6 +206,14 @@ a.modal-action,
   width: 12rem;
 }
 
+@media (max-width: 1440px) {
+  a.modal-action,
+  #show-intro-button,
+  #show-projects-button {
+    width: 20rem;
+  }
+}
+
 @media (max-width: 768px) {
   a.modal-action,
   #show-intro-button,

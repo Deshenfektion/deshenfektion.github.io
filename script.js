@@ -168,8 +168,8 @@ document.body.onmouseleave = () => updateLastMousePosition(originPosition);
 /* --- Show introduction on button click --- */
 document.getElementById("show-intro-button").addEventListener("click", () => {
   const intro = document.getElementById("introduction");
-  intro.classList.remove("hidden");
-  intro.classList.add("visible");
+  intro.classList.toggle("hidden");
+  intro.classList.toggle("visible");
 });
 
 /* --- Show projects on button click --- */
@@ -177,6 +177,6 @@ document
   .getElementById("show-projects-button")
   .addEventListener("click", () => {
     const projects = document.getElementById("modal-wrapper");
-    projects.classList.remove("hidden");
-    projects.classList.add("visible");
+    projects.classList.toggle("hidden");
+    projects.classList.toggle("visible");
   });
