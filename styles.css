@@ -82,7 +82,7 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  margin: 5rem 2rem 15rem 2rem;
+  margin: 5rem 2rem 5rem 2rem;
   color: rgb(255, 255, 255);
   font-size: 2rem;
   font-weight: 600;
@@ -101,12 +101,13 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 10rem;
   position: relative;
   z-index: 10;
   padding: 1rem 2rem 0rem 2rem;
-  margin-top: auto;
+  margin-top: 5rem;
   margin-bottom: 5rem;
 }
 
