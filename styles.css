@@ -58,6 +58,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 /* --- Star Background --- */
@@ -129,7 +130,7 @@ body {
   flex-wrap: wrap;
   position: relative;
   z-index: 10;
-  padding: 15rem 2rem 4rem 2rem;
+  padding: 5rem 2rem 4rem 2rem;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -267,12 +268,9 @@ a.modal-action {
 #title-font {
   width: clamp(300px, 80%, 800px);
   display: block;
-  position: absolute;
-  top: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
   height: auto;
-  z-index: 5;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 /* --- GitHub Portfolio Link --- */
@@ -281,13 +279,13 @@ a.modal-action {
   width: fit-content;
   margin-top: 0rem;
   margin-bottom: 2rem;
-  margin-left: auto;
-  margin-right: auto;
   cursor: none;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 #github-portfolio-link img {
-  height: 5rem;
+  height: 2rem;
   width: auto;
   display: block;
   transition: opacity 0.2s ease-in-out;
@@ -330,19 +328,6 @@ footer p {
     cursor: default;
   }
 
-  #app {
-    overflow: visible;
-    height: auto;
-  }
-
-  #modal-wrapper {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10rem;
-    padding-bottom: 2rem;
-    min-height: auto;
-  }
-
   .project-item {
     width: 90%;
     max-width: 400px;
@@ -359,22 +344,8 @@ footer p {
     width: 100%;
   }
 
-  #title-font {
-    top: 1.5rem;
-    width: 90%;
-  }
-
   #cursor {
     display: none;
-  }
-
-  #github-portfolio-link {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  #github-portfolio-link img {
-    height: 2rem;
   }
 
   footer {
