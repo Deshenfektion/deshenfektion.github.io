@@ -84,7 +84,7 @@ body {
 #introduction {
   text-align: center;
   display: flex;
-  font-family: "Inter", sans-serif;
+  font-family: "Play", sans-serif;
   flex-direction: column;
   margin: 3rem 2rem 5rem 2rem;
   color: rgb(255, 255, 255);
@@ -331,6 +331,11 @@ footer {
 }
 
 /* --- Fonts --- */
+@font-face {
+  font-family: "Play";
+  src: url("assets/fonts/Play-Regular.ttf") format("truetype");
+}
+
 .sixty-four-font {
   font-family: "Sixtyfour", sans-serif;
   font-optical-sizing: auto;
