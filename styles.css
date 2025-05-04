@@ -111,7 +111,12 @@ body {
   margin-bottom: 5rem;
 }
 
-.project-title-font {
+.project-title-font-1 {
+  width: clamp(270px, 80%, 270px);
+  margin-bottom: 1.5rem;
+}
+
+.project-title-font-2 {
   width: clamp(300px, 80%, 300px);
   margin-bottom: 1rem;
 }
