@@ -64,7 +64,7 @@ body {
 
 /* --- Title --- */
 #title-font {
-  width: clamp(300px, 80%, 600px);
+  width: clamp(350px, 80%, 600px);
   display: block;
   height: auto;
   margin-top: 3rem;
@@ -76,7 +76,8 @@ body {
 
 /* -- Greeting -- */
 #greeting-font {
-  margin-top: 5rem;
+  margin: 5rem 2rem 0rem 2rem;
+  width: clamp(200px, 80%, 600px);
 }
 
 /* -- Introduction -- */
@@ -97,6 +98,12 @@ body {
   line-height: 1.5;
 }
 
+@media (max-width: 768px) {
+  #introduction {
+    font-size: 1.5rem;
+  }
+}
+
 /* --- Project Section (Modal Wrapper) --- */
 #modal-wrapper {
   width: 100%;
@@ -112,12 +119,12 @@ body {
 }
 
 .project-title-font-1 {
-  width: clamp(200px, 80%, 270px);
+  width: clamp(100px, 80%, 270px);
   margin-bottom: 1.5rem;
 }
 
 .project-title-font-2 {
-  width: clamp(250px, 80%, 300px);
+  width: clamp(150px, 80%, 300px);
   margin-bottom: 1rem;
 }
 
@@ -143,8 +150,35 @@ body {
   object-fit: cover;
 }
 
+@media (max-width: 768px) {
+  .project-video {
+    width: 30rem;
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-video {
+    width: 16rem;
+    height: 200px;
+  }
+}
+
 a.modal-action {
   width: 12rem;
+}
+
+@media (max-width: 768px) {
+  a.modal-action {
+    width: 12rem; /* kleinere Breite */
+  }
+}
+
+/* Für sehr kleine Bildschirme */
+@media (max-width: 480px) {
+  a.modal-action {
+    width: 8rem; /* noch kleinere Breite */
+  }
 }
 
 .modal-action {
@@ -308,24 +342,11 @@ footer {
 }
 
 /* --- Responsive Styles --- */
-@media (max-height: 800px) {
-  /* Specific height adjustments if needed */
-}
-
-@media (max-width: 1024px) {
-  /* Tablet adjustments if needed */
-}
 
 @media (max-width: 768px) {
   body {
     overflow-y: auto;
     cursor: default;
-  }
-
-  .modal-action,
-  a.modal-action {
-    /* Ensure width applies to link too */
-    width: 100%;
   }
 
   #cursor {
