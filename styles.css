@@ -81,6 +81,7 @@ body {
 #introduction {
   text-align: center;
   display: flex;
+  font-family: "Inter", sans-serif;
   flex-direction: column;
   margin: 5rem 2rem 5rem 2rem;
   color: rgb(255, 255, 255);
