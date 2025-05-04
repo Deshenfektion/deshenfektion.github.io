@@ -107,7 +107,7 @@ body {
   z-index: 10;
   padding: 1rem 2rem 0rem 2rem;
   margin-top: auto;
-  margin-bottom: auto;
+  margin-bottom: 5rem;
 }
 
 .project-item {
@@ -210,7 +210,7 @@ a.modal-action {
   margin-bottom: 2rem;
   cursor: none;
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 #github-portfolio-link img {
