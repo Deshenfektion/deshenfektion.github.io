@@ -10,57 +10,6 @@ body {
   padding: 0;
 }
 
-/* --- Keyframe Animations --- */
-@keyframes pan {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 100% 0%;
-  }
-}
-
-@keyframes move-background {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: -100% 0%;
-  }
-}
-
-@keyframes bounce {
-  0%,
-  20%,
-  100% {
-    translate: 0% 0%;
-  }
-  10% {
-    translate: 0% -12%;
-  }
-}
-
-@keyframes blink {
-  0%,
-  3%,
-  100% {
-    scale: 1 1;
-  }
-  1.5% {
-    scale: 1 0;
-  }
-}
-
-/* --- App Container --- */
-#app {
-  min-height: 100vh;
-  overflow: hidden; /* Wird in @media angepasst */
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* --- Star Background --- */
 #star-container {
   height: 100%;
@@ -103,21 +52,23 @@ body {
   z-index: 2;
 }
 
-/* --- Fonts --- */
-.sixty-four-font {
-  font-family: "Sixtyfour", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "BLED" 0, "SCAN" 0;
+/* --- App Container --- */
+#app {
+  min-height: 100vh;
+  overflow: hidden; /* Wird in @media angepasst */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.inter-font {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-variation-settings: "slnt" 0;
+/* --- Title --- */
+#title-font {
+  width: clamp(300px, 80%, 800px);
+  display: block;
+  height: auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 /* --- Project Section (Modal Wrapper) --- */
@@ -154,7 +105,6 @@ body {
   object-fit: cover;
 }
 
-/* Project Link/Button Styling */
 a.modal-action {
   width: 16rem;
 }
@@ -228,51 +178,6 @@ a.modal-action {
   position: relative;
 }
 
-/* --- Custom Cursor --- */
-#cursor {
-  height: 2rem;
-  position: fixed;
-  z-index: 1000;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-}
-
-#cursor > img {
-  height: 100%;
-  width: 100%;
-}
-
-#cursor-eyes {
-  height: 90%;
-  width: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.18rem;
-  position: absolute;
-  z-index: 2;
-  left: 0px;
-  top: 0px;
-}
-
-.cursor-eye {
-  background-color: rgb(255 255 255 / 0.5);
-  height: 0.48rem;
-  width: 0.18rem;
-  border-radius: 1rem;
-  animation: blink 4s infinite;
-}
-
-/* --- Title --- */
-#title-font {
-  width: clamp(300px, 80%, 800px);
-  display: block;
-  height: auto;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
 /* --- GitHub Portfolio Link --- */
 #github-portfolio-link {
   display: block;
@@ -313,6 +218,59 @@ footer p {
     0.5px 0.5px black;
 }
 
+/* --- Custom Cursor --- */
+#cursor {
+  height: 2rem;
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+}
+
+#cursor > img {
+  height: 100%;
+  width: 100%;
+}
+
+#cursor-eyes {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.18rem;
+  position: absolute;
+  z-index: 2;
+  left: 0px;
+  top: 0px;
+}
+
+.cursor-eye {
+  background-color: rgb(255 255 255 / 0.5);
+  height: 0.48rem;
+  width: 0.18rem;
+  border-radius: 1rem;
+  animation: blink 4s infinite;
+}
+
+/* --- Fonts --- */
+.sixty-four-font {
+  font-family: "Sixtyfour", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "BLED" 0, "SCAN" 0;
+}
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
 /* --- Responsive Styles --- */
 @media (max-height: 800px) {
   /* Specific height adjustments if needed */
@@ -351,5 +309,46 @@ footer p {
   footer {
     position: relative;
     margin-top: 2rem;
+  }
+}
+
+/* --- Keyframe Animations --- */
+@keyframes pan {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+@keyframes move-background {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -100% 0%;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  100% {
+    translate: 0% 0%;
+  }
+  10% {
+    translate: 0% -12%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  3%,
+  100% {
+    scale: 1 1;
+  }
+  1.5% {
+    scale: 1 0;
   }
 }
