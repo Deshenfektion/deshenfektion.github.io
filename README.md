@@ -1,10 +1,10 @@
 # Welcome to my Portfolio!
 
-In this portfolio, I would like to showcase selected projects!
+Hi, in this portfolio, I would like to showcase selected projects!
 
 ## 🧩 About Me
 
-My friends call me Desh and I'm interested in building custom applications because I am tired of spending countless hours trying to find the "perfect app", when I can just make them myself – all while making life just a little more exciting! 👾
+People call me Desh and I'm interested in building custom applications because I am tired of spending countless hours trying to find the "perfect app", when I can just make them myself – all while making life just a little more exciting! 👾
 
 ## 📂 Projects
 
