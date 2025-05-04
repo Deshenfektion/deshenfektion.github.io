@@ -64,17 +64,19 @@ body {
 
 /* --- Title --- */
 #title-font {
-  width: clamp(300px, 80%, 700px);
+  width: clamp(300px, 80%, 600px);
   display: block;
   height: auto;
   margin-top: 3rem;
   margin-bottom: 1rem;
-  /* background-color: rgb(255, 255, 255); */
   opacity: 100%;
   border-radius: 30px;
   padding: 1rem 2rem;
-  /* outline: 0.2rem solid white;
-  outline-offset: 0.2rem; */
+}
+
+/* -- Greeting -- */
+#greeting-font {
+  margin-top: 5rem;
 }
 
 /* -- Introduction -- */
@@ -83,21 +85,16 @@ body {
   display: flex;
   font-family: "Inter", sans-serif;
   flex-direction: column;
-  margin: 5rem 2rem 5rem 2rem;
+  margin: 3rem 2rem 5rem 2rem;
   color: rgb(255, 255, 255);
   font-size: 2rem;
   font-weight: 600;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-  max-width: 800px;
-}
-/* -- Greeting -- */
-#greeting {
-  font-size: 8rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  max-width: 700px;
 }
 
 #introduction p {
-  line-height: 2;
+  line-height: 1.5;
 }
 
 /* --- Project Section (Modal Wrapper) --- */
