@@ -82,11 +82,11 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  margin: 5rem 0rem 15rem 0rem;
+  margin: 5rem 2rem 15rem 2rem;
   color: rgb(255, 255, 255);
   font-size: 2rem;
-  font-weight: 700;
-  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-family: "Fredoka", monospace;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   max-width: 800px;
