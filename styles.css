@@ -104,11 +104,10 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10rem;
+  gap: 5rem;
   position: relative;
   z-index: 10;
   padding: 1rem 2rem 0rem 2rem;
-  margin-top: 5rem;
   margin-bottom: 5rem;
 }
 
@@ -121,12 +120,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem;
+  margin: 1rem 1rem;
+  width: 90%;
+  max-width: 400px;
+  margin-bottom: 3rem;
 }
 
 .project-video {
   width: 25rem;
-  height: auto;
+  height: 346px;
   display: block;
   margin-bottom: 1.5rem;
   border-radius: 0.75rem;
@@ -315,16 +317,6 @@ footer p {
   body {
     overflow-y: auto;
     cursor: default;
-  }
-
-  .project-item {
-    width: 90%;
-    max-width: 400px;
-    margin-bottom: 3rem;
-  }
-
-  .project-video {
-    width: 100%;
   }
 
   .modal-action,
