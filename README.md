@@ -8,17 +8,22 @@ People call me Desh and I'm interested in building custom applications because I
 
 ## 📂 Projects
 
-### <img src="./assets/mariotodo-favicon.png" width="16" height="16"> MarioTodo
+### [<img src="./assets/mariotodo-favicon.png" width="16" height="16"> MarioTodo](https://github.com/Deshenfektion/MarioTodo)
 A playful todo app styled like a Super Mario game. Combines a fun UI with a sense of progress and reward to boost motivation.
 
-[🔗 Live App](https://todo-list-six-puce.vercel.app/) | [💻 Source Code](https://github.com/Deshenfektion/todo-list)
-
-### <img src="./assets/heatmap-favicon.png" width="16" height="16"> MyHeatmap
+### [<img src="./assets/heatmap-favicon.png" width="16" height="16"> MyHeatmap](https://github.com/Deshenfektion/MyHeatmap)
 A minimalist heatmap app inspired by GitHub's commit grid. Lets users define custom rows and track habits or routines through click-based activity squares.
 
-[🔗 Live App](https://heatmap-app-two.vercel.app/) | [💻 Source Code](https://github.com/Deshenfektion/heatmap-app)
+## 🚀 Goals
 
-## 🔨 WIP
+- Building strong fundamentals and not relying too much on abstractions (e.g. always the same frameworks)
+- Embracing passion for development, constantly learning more about it and having fun!
+
+## 📫 Contact
+
+Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/deshenrao/) or [Email](mailto:deshen.r1502@gmail.com)!
+
+## 🌱 Growing Projects
 
 - ⚗️📒 **Knowledge Vault**  
   A minimalist personal blog app for journaling. Choose a template, upload an image, and start writing—no distractions, no complexity. Focused on self-expression with an aesthetic blog-style look.
@@ -28,16 +33,6 @@ A minimalist heatmap app inspired by GitHub's commit grid. Lets users define cus
 
 - 🧹❤️😤 **Couple Chore Chaos**  
   A fun and helpful chore-tracking app for couples. Keep the peace by fairly assigning tasks like cleaning or cooking—no more debates over who does what.
-
-## 🚀 Goals
-
-- Building useful software while being creative
-- Building strong fundamentals and not relying too much on abstractions (e.g. always the same languages or frameworks)
-- Embracing passion for development, constantly learning more about it and having fun!
-
-## 📫 Contact
-
-Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/deshenrao/) or [Email](mailto:deshen.r1502@gmail.com)!
 
 ## Credits
 
