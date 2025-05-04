@@ -74,14 +74,13 @@ body {
 /* --- Project Section (Modal Wrapper) --- */
 #modal-wrapper {
   width: 100%;
-  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
   position: relative;
   z-index: 10;
-  padding: 5rem 2rem 4rem 2rem;
+  padding: 1rem 2rem 0rem 2rem;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -190,7 +189,7 @@ a.modal-action {
 }
 
 #github-portfolio-link img {
-  height: 2rem;
+  height: 10rem;
   width: auto;
   display: block;
   transition: opacity 0.2s ease-in-out;
