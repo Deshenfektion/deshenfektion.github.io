@@ -104,6 +104,12 @@ body {
   }
 }
 
+@media (max-width: 425px) {
+  #introduction {
+    font-size: 1rem;
+  }
+}
+
 /* --- Project Section (Modal Wrapper) --- */
 #modal-wrapper {
   width: 100%;
