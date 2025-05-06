@@ -99,7 +99,7 @@ body {
   color: rgb(255, 255, 255);
   font-size: 2rem;
   font-weight: 600;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   max-width: 700px;
   overflow: hidden;
   transition: max-height 1s ease, opacity 0.6s ease, transform 0.6s ease;
@@ -134,7 +134,7 @@ body {
 @media (max-width: 425px) {
   #introduction {
     font-size: 1rem;
-    text-shadow: 0.3px 0.3px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 1.5px rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -203,7 +203,7 @@ body {
 a.modal-action,
 #show-intro-button,
 #show-projects-button {
-  width: 12rem;
+  width: 20rem;
 }
 
 @media (max-width: 1440px) {
