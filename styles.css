@@ -202,14 +202,16 @@ body {
 
 a.modal-action,
 #show-intro-button,
-#show-projects-button {
+#show-projects-button,
+#show-skills-button {
   width: 20rem;
 }
 
 @media (max-width: 1440px) {
   a.modal-action,
   #show-intro-button,
-  #show-projects-button {
+  #show-projects-button,
+  #show-skills-button {
     width: 20rem;
   }
 }
@@ -217,7 +219,8 @@ a.modal-action,
 @media (max-width: 768px) {
   a.modal-action,
   #show-intro-button,
-  #show-projects-button {
+  #show-projects-button,
+  #show-skills-button {
     width: 15rem;
   }
 }
@@ -225,7 +228,8 @@ a.modal-action,
 @media (max-width: 480px) {
   a.modal-action,
   #show-intro-button,
-  #show-projects-button {
+  #show-projects-button,
+  #show-skills-button {
     width: 8rem;
   }
 }
@@ -451,5 +455,152 @@ footer {
   }
   1.5% {
     scale: 1 0;
+  }
+}
+
+/* --- SKILLS SECTION --- */
+
+#skills-section {
+  width: 90%;
+  max-width: 700px;
+  margin: 3rem auto 4rem auto; /* Passt sich an, wenn .hidden */
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background-color: rgba(18, 176, 255, 0.25);
+  border-radius: 0.75rem;
+  outline: 0.2rem solid white;
+  outline-offset: 0.2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  /* Behalte die Transitions für die Sektion selbst bei */
+  transition: max-height 1s ease, opacity 0.6s ease, transform 0.6s ease,
+    margin 1s ease, padding 1s ease;
+}
+
+/* Kopiere die .hidden Logik von #introduction.hidden für #skills-section.hidden */
+#skills-section.hidden {
+  max-height: 0 !important; /* Wichtig, damit es übergeht */
+  opacity: 0 !important;
+  transform: translateY(-30px) !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  outline-width: 0 !important;
+  border-width: 0 !important;
+  /* Visuelle Styles bei "hidden" komplett entfernen */
+  overflow: hidden !important;
+}
+
+.skills-title {
+  font-family: "Play", sans-serif; /* Dein bestehender Font */
+  font-size: clamp(2.2rem, 6vw, 3rem);
+  color: rgb(253, 224, 71); /* Dein Akzent-Gelb */
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.6), 0 0 10px rgba(253, 224, 71, 0.5);
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.skill-item {
+  margin-bottom: 1.8rem; /* Etwas kleinerer Abstand */
+  text-align: left;
+}
+
+.skill-item:last-child {
+  margin-bottom: 0;
+}
+
+.skill-name {
+  font-family: "Inter", sans-serif; /* Dein bestehender Font */
+  font-weight: 600;
+  font-size: 1.15rem; /* Leicht angepasst */
+  display: block;
+  margin-bottom: 0.6rem; /* Leicht angepasst */
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.skill-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Leicht angepasster Abstand */
+}
+
+.skill-bar-track {
+  flex-grow: 1;
+  height: 32px; /* Höhe angepasst */
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 5px; /* Leicht angepasst */
+  border: 2px solid rgba(255, 255, 255, 0.4); /* Etwas subtilerer Rand */
+  padding: 3px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  width: 0%;
+  background-color: rgb(253, 224, 71); /* Dein Akzent-Gelb */
+  border-radius: 2px; /* Kleiner Radius, passt zum Innenbereich */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Icon rechts */
+  position: relative;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3),
+    /* Innerer Schein oben */ inset 0 -1px 1px rgba(0, 0, 0, 0.1); /* Innerer Schatten unten */
+  /* ANIMATION */
+  transition: width 1s ease-out;
+}
+
+.skill-bar-star {
+  width: 20px; /* Größe Icon */
+  height: 20px;
+  opacity: 1; /* Immer sichtbar */
+  margin-right: 6px; /* Abstand vom rechten Rand des Füllbalkens */
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
+}
+
+.skill-percentage {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 1rem; /* Leicht angepasst */
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 4px 9px; /* Leicht angepasst */
+  border-radius: 4px;
+  min-width: 50px; /* Angepasst */
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Sehr subtil */
+}
+
+/* --- Responsive Anpassungen --- */
+@media (max-width: 600px) {
+  #skills-section {
+    padding: 1.5rem 1rem;
+  }
+  .skill-name {
+    font-size: 1.05rem;
+  }
+  .skill-bar-track {
+    height: 28px;
+  }
+  .skill-bar-star {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+  .skill-percentage {
+    font-size: 0.9rem;
+    padding: 3px 7px;
+    min-width: 45px;
   }
 }
