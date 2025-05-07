@@ -79,7 +79,7 @@ body {
   width: clamp(200px, 80%, 600px);
 }
 
-/* -- Introduction -- */
+/* -- Show section buttons -- */
 #show-intro-button {
   margin-top: 4.3rem;
   margin-bottom: 1.5rem;
@@ -95,32 +95,44 @@ body {
   margin-top: -1rem;
 }
 
+/* -- Introduction -- */
 #introduction {
   text-align: center;
   display: flex;
   font-family: "Play", sans-serif;
   flex-direction: column;
-  margin: 3rem 2rem 4rem 2rem;
+  margin: 3rem 2rem 4rem 2rem; /* Basis-Margin für sichtbaren Zustand */
+  padding: 0; /* Basis-Padding für sichtbaren Zustand, falls vorhanden */
   color: rgb(255, 255, 255);
   font-size: 2rem;
   font-weight: 600;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   max-width: 700px;
   overflow: hidden;
-  transition: max-height 1s ease, opacity 0.6s ease, transform 0.6s ease;
+  transition: max-height 1s ease, opacity 0.5s ease-out 0.1s,
+    transform 0.5s ease-out 0.1s, margin 1s ease, padding 1s ease;
 }
 
 #introduction.hidden,
-#modal-wrapper.hidden {
-  max-height: 0;
-  opacity: 0;
-  transform: translateY(-30px);
-  margin: 0;
-  padding: 0;
+#modal-wrapper.hidden,
+#skills-section.hidden {
+  max-height: 0 !important;
+  opacity: 0 !important;
+  transform: translateY(-30px) !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  overflow: hidden !important;
 }
 
 #introduction.visible,
-#modal-wrapper.visible {
+#modal-wrapper.visible,
+#skills-section.visible {
   max-height: 2000px;
   opacity: 1;
   transform: translateY(0);
