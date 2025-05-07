@@ -404,11 +404,6 @@ footer {
 @media (max-width: 768px) {
   body {
     overflow-y: auto;
-    cursor: default;
-  }
-
-  #cursor {
-    display: none;
   }
 
   footer {
