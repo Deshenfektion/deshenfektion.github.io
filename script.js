@@ -182,14 +182,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const introSection = document.getElementById("introduction");
     if (introButton && introSection) {
       introButton.addEventListener("click", () => {
-        // Schließe andere Sektionen
-        document.getElementById("modal-wrapper")?.classList.add("hidden");
-        document.getElementById("modal-wrapper")?.classList.remove("visible");
-        document.getElementById("skills-section")?.classList.add("hidden");
-        document.getElementById("skills-section")?.classList.remove("visible");
-
         introSection.classList.toggle("hidden");
-        introSection.classList.toggle("visible");
+        introSection.classList.toggle("visible"); // Behalte dies bei, wenn du .visible für deine Animationen/Styles nutzt
       });
     } else {
       console.warn("Intro button or section not found.");
@@ -200,14 +194,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectsSection = document.getElementById("modal-wrapper");
     if (projectsButton && projectsSection) {
       projectsButton.addEventListener("click", () => {
-        // Schließe andere Sektionen
-        document.getElementById("introduction")?.classList.add("hidden");
-        document.getElementById("introduction")?.classList.remove("visible");
-        document.getElementById("skills-section")?.classList.add("hidden");
-        document.getElementById("skills-section")?.classList.remove("visible");
-
         projectsSection.classList.toggle("hidden");
-        projectsSection.classList.toggle("visible");
+        projectsSection.classList.toggle("visible"); // Behalte dies bei
       });
     } else {
       console.warn("Projects button or section not found.");
@@ -230,21 +218,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // function resetSkillBarWidths() { // Auskommentiert, da nicht aktiv genutzt
-    //   const skillFills = skillsSection?.querySelectorAll(".skill-bar-fill");
-    //   skillFills?.forEach((fillElement) => {
-    //     fillElement.style.width = "0%";
-    //   });
-    // }
-
     if (showSkillsButton && skillsSection) {
       showSkillsButton.addEventListener("click", () => {
-        // Schließe andere Sektionen
-        document.getElementById("introduction")?.classList.add("hidden");
-        document.getElementById("introduction")?.classList.remove("visible");
-        document.getElementById("modal-wrapper")?.classList.add("hidden");
-        document.getElementById("modal-wrapper")?.classList.remove("visible");
-
         const isSkillsHidden = skillsSection.classList.contains("hidden");
         if (isSkillsHidden) {
           skillsSection.classList.remove("hidden");
@@ -253,7 +228,6 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           skillsSection.classList.add("hidden");
           skillsSection.classList.remove("visible");
-          // resetSkillBarWidths(); // Falls gewünscht
         }
       });
     } else {

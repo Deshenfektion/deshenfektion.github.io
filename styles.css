@@ -90,6 +90,11 @@ body {
   margin-top: 1rem;
 }
 
+#show-skills-button {
+  margin-bottom: 3.5rem;
+  margin-top: -1rem;
+}
+
 #introduction {
   text-align: center;
   display: flex;
@@ -569,9 +574,9 @@ footer {
   font-size: 1rem; /* Leicht angepasst */
   color: #fff;
   background-color: rgba(0, 0, 0, 0.4);
-  padding: 4px 9px; /* Leicht angepasst */
+  padding: 4px 4px; /* Leicht angepasst */
   border-radius: 4px;
-  min-width: 50px; /* Angepasst */
+  width: clamp(60px, 80%, 70px);
   text-align: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.15); /* Sehr subtil */
@@ -595,7 +600,7 @@ footer {
   }
   .skill-percentage {
     font-size: 0.9rem;
-    padding: 3px 7px;
-    min-width: 45px;
+    padding: 3px 3px;
+    min-width: 30px;
   }
 }
