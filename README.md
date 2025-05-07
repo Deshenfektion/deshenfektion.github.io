@@ -42,6 +42,8 @@ Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/deshenrao/) or
 
 - Mario UI Design created by Hyperplexed
 
+- Star icon by Icons8
+
 ## Copyright
 
 This project is a fan creation and is not affiliated with Nintendo in any way. All designs and content based on Nintendo properties are created for fan purposes only and are not commercial.
