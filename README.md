@@ -1,12 +1,14 @@
-# Welcome to my Portfolio!
-
-Hi, in this portfolio, I would like to showcase selected projects!
+# Hi I'm Desh
 
 ## 🧩 About Me
 
-People call me Desh and I'm interested in building custom applications because I am tired of spending countless hours trying to find the "perfect app", when I can just make them myself – all while making life just a little more exciting! 👾
+I'm interested in building custom applications because I am tired of spending countless hours trying to find the "perfect app", when I can just make them myself – all while making life just a little more exciting! 👾
 
 ## 📂 Projects
+
+### [📝 Exambyte](https://github.com/Deshenfektion/exambyte-bytemeifyoucan)
+
+An online examination tool with an intuitve and simple UI (university project).
 
 ### [<img src="./assets/mariotodo-favicon.png" width="16" height="16"> MarioTodo](https://github.com/Deshenfektion/MarioTodo)
 
