@@ -6,7 +6,7 @@ I'm interested in building custom applications because I am tired of spending co
 
 ## 📂 Projects
 
-### [📝 Exambyte](https://github.com/Deshenfektion/exambyte-bytemeifyoucan)
+### [📝 Exambyte](https://github.com/Deshenfektion/Exambyte)
 
 An online examination tool with an intuitve and simple UI (university project).
 
