@@ -102,13 +102,15 @@ body {
   font-family: "Play", sans-serif;
   flex-direction: column;
   margin: 3rem 2rem 4rem 2rem; /* Basis-Margin für sichtbaren Zustand */
-  padding: 0; /* Basis-Padding für sichtbaren Zustand, falls vorhanden */
-  color: rgb(255, 255, 255);
+  padding: 1em; /* Basis-Padding für sichtbaren Zustand */
+  color: rgb(0, 0, 0);
   font-size: 2rem;
   font-weight: 600;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   max-width: 700px;
   overflow: hidden;
+  border-radius: 1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: max-height 1s ease, opacity 0.5s ease-out 0.1s,
     transform 0.5s ease-out 0.1s, margin 1s ease, padding 1s ease;
 }
@@ -201,6 +203,10 @@ body {
   outline-offset: 0.2rem;
   background-color: #1a1a1a;
   object-fit: cover;
+}
+
+#myheatmap-demo {
+  object-position: left;
 }
 
 @media (max-width: 768px) {
