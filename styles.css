@@ -205,6 +205,10 @@ body {
   object-fit: cover;
 }
 
+.view-github-logo {
+  width: 3em;
+}
+
 #myheatmap-demo {
   object-position: left;
 }
