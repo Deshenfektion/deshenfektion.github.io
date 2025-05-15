@@ -8,7 +8,7 @@ I'm interested in building custom applications because I am tired of spending co
 
 ### [📝 Exambyte](https://github.com/Deshenfektion/Exambyte)
 
-An online examination tool with an intuitve and simple UI (university project).
+An online examination tool with an intuitive and simple UI.
 
 ### [<img src="./assets/mariotodo-favicon.png" width="16" height="16"> MarioTodo](https://github.com/Deshenfektion/MarioTodo)
 
