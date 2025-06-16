@@ -97,10 +97,11 @@ body {
 
 /* -- Introduction -- */
 #introduction {
-  text-align: center;
+  text-align: left;
   display: flex;
   font-family: "Play", sans-serif;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 2rem;
   margin: 3rem 2rem 4rem 2rem; /* Basis-Margin für sichtbaren Zustand */
   padding: 1em; /* Basis-Padding für sichtbaren Zustand */
   color: rgb(0, 0, 0);
@@ -113,6 +114,27 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: max-height 1s ease, opacity 0.5s ease-out 0.1s,
     transform 0.5s ease-out 0.1s, margin 1s ease, padding 1s ease;
+}
+
+#introduction-photo-container img {
+  width: 400px;
+  border-radius: 20px;
+}
+
+#introduction-title {
+  font-size: xx-large;
+  font-weight: 900;
+}
+
+#introduction-text {
+  justify-content: center;
+  align-items: center;
+  line-height: 2.5;
+  font-size: large;
+}
+
+#introduction-text ul {
+  list-style-position: inside;
 }
 
 #introduction.hidden,
@@ -138,10 +160,6 @@ body {
   max-height: 2000px;
   opacity: 1;
   transform: translateY(0);
-}
-
-#introduction p {
-  line-height: 1.5;
 }
 
 @media (max-width: 768px) {
