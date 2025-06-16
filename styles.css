@@ -1,4 +1,3 @@
-/* --- General Styles & Resets --- */
 body {
   background-color: rgba(109, 179, 213, 0.904);
   cursor: none;
@@ -10,7 +9,6 @@ body {
   padding: 0;
 }
 
-/* --- Star Background --- */
 #star-container {
   height: 100%;
   overflow: hidden;
@@ -52,17 +50,15 @@ body {
   z-index: 2;
 }
 
-/* --- App Container --- */
 #app {
   min-height: 100vh;
-  overflow: hidden; /* Wird in @media angepasst */
+  overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* --- Title --- */
 #title-font {
   width: clamp(350px, 80%, 600px);
   display: block;
@@ -73,13 +69,11 @@ body {
   padding: 1rem 2rem;
 }
 
-/* -- Greeting -- */
 #greeting-font {
   margin: 5rem 2rem 0rem 2rem;
   width: clamp(200px, 80%, 600px);
 }
 
-/* -- Show section buttons -- */
 #show-intro-button {
   margin-top: 4.3rem;
   margin-bottom: 1.5rem;
@@ -95,15 +89,14 @@ body {
   margin-top: -1rem;
 }
 
-/* -- Introduction -- */
 #introduction {
   text-align: left;
   display: flex;
   font-family: "Play", sans-serif;
   flex-direction: row;
   gap: 2rem;
-  margin: 3rem 2rem 4rem 2rem; /* Basis-Margin für sichtbaren Zustand */
-  padding: 1em; /* Basis-Padding für sichtbaren Zustand */
+  margin: 3rem 2rem 4rem 2rem;
+  padding: 1em;
   color: rgb(0, 0, 0);
   font-size: 2rem;
   font-weight: 600;
@@ -114,6 +107,12 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: max-height 1s ease, opacity 0.5s ease-out 0.1s,
     transform 0.5s ease-out 0.1s, margin 1s ease, padding 1s ease;
+  text-shadow: 1px 1px 1.5px rgba(0, 0, 0, 0.25);
+}
+
+#introduction-photo-container {
+  display: flex;
+  justify-content: center;
 }
 
 #introduction-photo-container img {
@@ -143,14 +142,8 @@ body {
   max-height: 0 !important;
   opacity: 0 !important;
   transform: translateY(-30px) !important;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
   overflow: hidden !important;
 }
 
@@ -165,6 +158,7 @@ body {
 @media (max-width: 768px) {
   #introduction {
     font-size: 1.5rem;
+    text-shadow: 1px 1px 1.5px rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -175,7 +169,35 @@ body {
   }
 }
 
-/* --- Project Section (Modal Wrapper) --- */
+@media (max-width: 768px) {
+  #introduction {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  #introduction-photo-container img {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  #introduction-text {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 425px) {
+  #introduction-photo-container img {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  #introduction-text {
+    font-size: 0.95rem;
+  }
+}
+
 #modal-wrapper {
   width: 100%;
   display: flex;
@@ -347,7 +369,6 @@ a.modal-action,
   position: relative;
 }
 
-/* --- Footer --- */
 footer {
   display: flex;
   flex-direction: column;
@@ -363,7 +384,6 @@ footer {
   position: relative;
 }
 
-/* -- Social links -- */
 #social-links {
   margin-top: auto;
   display: flex;
@@ -379,14 +399,12 @@ footer {
   cursor: none;
 }
 
-/* Copyright and credits*/
 #copyright-and-credits p {
   font-size: small;
   text-shadow: -0.5px -0.5px black, 0.5px -0.5px black, -0.5px 0.5px black,
     0.5px 0.5px black;
 }
 
-/* --- Custom Cursor --- */
 #cursor {
   height: 2rem;
   position: fixed;
@@ -422,7 +440,6 @@ footer {
   animation: blink 4s infinite;
 }
 
-/* --- Fonts --- */
 @font-face {
   font-family: "Play";
   src: url("assets/fonts/Play-Regular.ttf") format("truetype");
@@ -444,8 +461,6 @@ footer {
   font-variation-settings: "slnt" 0;
 }
 
-/* --- Responsive Styles --- */
-
 @media (max-width: 768px) {
   body {
     overflow-y: auto;
@@ -462,7 +477,6 @@ footer {
   }
 }
 
-/* --- Keyframe Animations --- */
 @keyframes pan {
   0% {
     background-position: 0% 0%;
@@ -503,12 +517,10 @@ footer {
   }
 }
 
-/* --- SKILLS SECTION --- */
-
 #skills-section {
   width: 90%;
   max-width: 700px;
-  margin: 3rem auto 4rem auto; /* Passt sich an, wenn .hidden */
+  margin: 3rem auto 4rem auto;
   color: rgb(255, 255, 255);
   text-align: center;
   padding: 2rem 1.5rem;
@@ -518,14 +530,12 @@ footer {
   outline-offset: 0.2rem;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
   overflow: hidden;
-  /* Behalte die Transitions für die Sektion selbst bei */
   transition: max-height 1s ease, opacity 0.6s ease, transform 0.6s ease,
     margin 1s ease, padding 1s ease;
 }
 
-/* Kopiere die .hidden Logik von #introduction.hidden für #skills-section.hidden */
 #skills-section.hidden {
-  max-height: 0 !important; /* Wichtig, damit es übergeht */
+  max-height: 0 !important;
   opacity: 0 !important;
   transform: translateY(-30px) !important;
   margin-top: 0 !important;
@@ -534,14 +544,13 @@ footer {
   padding-bottom: 0 !important;
   outline-width: 0 !important;
   border-width: 0 !important;
-  /* Visuelle Styles bei "hidden" komplett entfernen */
   overflow: hidden !important;
 }
 
 .skills-title {
-  font-family: "Play", sans-serif; /* Dein bestehender Font */
+  font-family: "Play", sans-serif;
   font-size: clamp(2.2rem, 6vw, 3rem);
-  color: rgb(253, 224, 71); /* Dein Akzent-Gelb */
+  color: rgb(253, 224, 71);
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.6), 0 0 10px rgba(253, 224, 71, 0.5);
   margin-bottom: 2.5rem;
   letter-spacing: 1px;
@@ -554,7 +563,7 @@ footer {
 }
 
 .skill-item {
-  margin-bottom: 1.8rem; /* Etwas kleinerer Abstand */
+  margin-bottom: 1.8rem;
   text-align: left;
 }
 
@@ -563,11 +572,11 @@ footer {
 }
 
 .skill-name {
-  font-family: "Inter", sans-serif; /* Dein bestehender Font */
+  font-family: "Inter", sans-serif;
   font-weight: 600;
-  font-size: 1.15rem; /* Leicht angepasst */
+  font-size: 1.15rem;
   display: block;
-  margin-bottom: 0.6rem; /* Leicht angepasst */
+  margin-bottom: 0.6rem;
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
@@ -575,15 +584,15 @@ footer {
 .skill-bar-container {
   display: flex;
   align-items: center;
-  gap: 12px; /* Leicht angepasster Abstand */
+  gap: 12px;
 }
 
 .skill-bar-track {
   flex-grow: 1;
-  height: 32px; /* Höhe angepasst */
+  height: 32px;
   background-color: rgba(0, 0, 0, 0.25);
-  border-radius: 5px; /* Leicht angepasst */
-  border: 2px solid rgba(255, 255, 255, 0.4); /* Etwas subtilerer Rand */
+  border-radius: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
   padding: 3px;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -593,41 +602,39 @@ footer {
 .skill-bar-fill {
   height: 100%;
   width: 0%;
-  background-color: rgb(253, 224, 71); /* Dein Akzent-Gelb */
-  border-radius: 2px; /* Kleiner Radius, passt zum Innenbereich */
+  background-color: rgb(253, 224, 71);
+  border-radius: 2px;
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Icon rechts */
+  justify-content: flex-end;
   position: relative;
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3),
-    /* Innerer Schein oben */ inset 0 -1px 1px rgba(0, 0, 0, 0.1); /* Innerer Schatten unten */
-  /* ANIMATION */
+    inset 0 -1px 1px rgba(0, 0, 0, 0.1);
   transition: width 1s ease-out;
 }
 
 .skill-bar-star {
-  width: 20px; /* Größe Icon */
+  width: 20px;
   height: 20px;
-  opacity: 1; /* Immer sichtbar */
-  margin-right: 6px; /* Abstand vom rechten Rand des Füllbalkens */
+  opacity: 1;
+  margin-right: 6px;
   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4));
 }
 
 .skill-percentage {
   font-family: "Inter", sans-serif;
   font-weight: bold;
-  font-size: 1rem; /* Leicht angepasst */
+  font-size: 1rem;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.4);
-  padding: 4px 4px; /* Leicht angepasst */
+  padding: 4px 4px;
   border-radius: 4px;
   width: clamp(60px, 80%, 70px);
   text-align: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.15); /* Sehr subtil */
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* --- Responsive Anpassungen --- */
 @media (max-width: 600px) {
   #skills-section {
     padding: 1.5rem 1rem;
