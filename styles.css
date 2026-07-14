@@ -112,12 +112,17 @@ body {
 
 #introduction-photo-container {
   display: flex;
+  align-items: flex-start;
   justify-content: center;
+  flex: 0 0 400px;
 }
 
 #introduction-photo-container img {
-  width: 400px;
+  display: block;
+  width: 100%;
+  height: auto;
   border-radius: 20px;
+  object-fit: contain;
 }
 
 #introduction-title {
@@ -176,9 +181,14 @@ body {
     gap: 1rem;
   }
 
-  #introduction-photo-container img {
-    width: 80%;
+  #introduction-photo-container {
+    flex-basis: auto;
+    width: 100%;
     max-width: 300px;
+  }
+
+  #introduction-photo-container img {
+    width: 100%;
   }
 
   #introduction-text {
@@ -188,9 +198,12 @@ body {
 }
 
 @media (max-width: 425px) {
+  #introduction-photo-container {
+    max-width: 250px;
+  }
+
   #introduction-photo-container img {
     width: 100%;
-    max-width: 250px;
   }
 
   #introduction-text {
